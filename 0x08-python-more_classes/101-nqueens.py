@@ -94,8 +94,7 @@ def recursive_solve(board, row, queens, solutions):
     Returns:
         solutions
     """
-    if queens == len(board):
-        solutions.append(get_solution(board))
+    if queens == len(board):solutions.append(get_solution(board))
         return (solutions)
 
     for c in range(len(board)):
@@ -103,8 +102,7 @@ def recursive_solve(board, row, queens, solutions):
             tmp_board = board_deepcopy(board)
             tmp_board[row][c] = "Q"
             xout(tmp_board, row, c)
-            solutions = recursive_solve(tmp_board, row + 1,
-                                        queens + 1, solutions)
+            solutions = recursive_solve(tmp_board, row + 1,queens + 1, solutions)
 
     return (solutions)
 
