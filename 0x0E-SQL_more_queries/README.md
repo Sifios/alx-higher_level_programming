@@ -1,0 +1,1 @@
+This project is about the Solutions to SQL - More queries tasks
